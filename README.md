@@ -8,13 +8,11 @@ be run with Windows Task Scheduler to check for updates every day.
 
 
 **Libraries:**
-
 venmo-api
 gspread
 
 
 **How it Works:**
-
 First, the venmo-api and gspread libraries must be added. Then, using the Google Cloud Platform, both Google Drive and Google Sheets APIs must be enabled.
 From the API dashboard, credentials were made and downloaded as 'service_account.json'. Additionally, an access token to view the transactions of the venmo account
 is required. Then, I created clients for both Venmo and Google Sheets. Next, I open the specific sheet titled 'venmo_python', and select the page titled 'Payments'.
@@ -27,7 +25,6 @@ transactions that were added or if none were added.
 
 
 **Further Development:**
-
 I plan on utlizing keywords to determine the "type" of transaction is being added. Whether it be for club dues, purchasing merchandise, etc.
 Additionally, I would like to try implementing a form of verification through the use of our college IDs, 'Hokie Passport'. Members would be able to swipe their card
 into a reader, and we would be notified if they have paid their dues for the year.
