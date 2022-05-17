@@ -31,7 +31,6 @@ for t in transactions:
             'Sender': sender
             }
 
-    # all_data = wks.get_all_records()  # get all data from spreadsheet
     already_exists = False
 
     for dictionary in all_data:  # check if transaction already exists in spreadsheet
