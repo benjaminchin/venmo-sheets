@@ -1,4 +1,4 @@
-# casvenmo
+# python-automated-venmo-transaction-sheet
 
 This is a script I wrote to automatically add new venmo transactions to a google spreadsheet. I decided to write this script because of a club I am involved with:
 Chinese American Society @ Virginia Tech. During the year, we have members pay dues, as well as event and merchandise costs if they so choose. We take all these payments
