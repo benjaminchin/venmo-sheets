@@ -30,6 +30,7 @@ def main():
 
     sheet_updates = 0
     all_data = wks.get_all_records()
+    new_rows = []
     for t in transactions:
         # data from each venmo transaction
         sender = t.actor.first_name + ' ' + t.actor.last_name
@@ -52,14 +53,14 @@ def main():
 
         if not already_exists:  # if the transaction doesn't exist in spreadsheet, add it
             insertion = [receiver, sender, amt, note]
-            wks.append_row(insertion)
-            sheet_updates += 1
+            new_rows.append(insertion)
 
+    wks.append_rows(new_rows)
     # notify whether updates have been made to the spreadsheet
-    if sheet_updates > 0:
-        print(str(sheet_updates) +
+    if len(new_rows) > 0:
+        print(str(len(new_rows)) +
               ' new venmo transaction(s) have been added to the sheet.')
-    elif sheet_updates == 0:
+    elif  len(new_rows) == 0:
         print('No new venmo transactions.')
 
 
